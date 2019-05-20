@@ -7,7 +7,6 @@ const connection = mysql.createConnection({
   user: "root",
   password: "root",
   port: 3306,
-
 });
 
 // Connect to the mysql server and sql database
@@ -62,8 +61,7 @@ function slamazonBuy() {
           if (res[0].stock_quantity < input.stock_quantity) {
             console.log(`We are sorry, but Slamazon currently does not have enough inventory to fulfill the quantity you requested.`);
             console.log(`Slamazon currently has ${res[0].stock_quantity} units available.`);
-            console.log(`Please place a new order if you would like to purchase the quantity available.`);
-
+            console.log(`Please press Ctrl+C to exit and create a new order if you would like to purchase the quantity available.`);
           }
           else {
 
@@ -74,22 +72,19 @@ function slamazonBuy() {
             console.log(`Quantity Purchased: ${input.stock_quantity}`);
             console.log(`Total Price: $${input.stock_quantity * res[0].price}`);
             console.log("\nYou will receive a confirmation email when your order has shipped.  Thank you for choosing Slamazon!");
+
+            // Update the inventory
+            let newQuantity = (res[0].stock_quantity - input.stock_quantity);
+            let stockItem = input.item_id;
+
+            updateStock(newQuantity, stockItem)
           }
-
-          // Update the inventory
-          let newQuantity = (res[0].stock_quantity - input.stock_quantity);
-          let stockItem = input.item_id;
-
-          updateQuantity(newQuantity, stockItem)
         }
-      );
-
-
-
+      )
     });
 };
 
-function updateQuantity(newQuantity, stockItem) {
+function updateStock(newQuantity, stockItem) {
 
   connection.query(
     `UPDATE slamazonDB.products SET stock_quantity = ${newQuantity}  WHERE item_id = ${stockItem}`
