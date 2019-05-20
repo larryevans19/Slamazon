@@ -1,0 +1,23 @@
+{
+  "name": "slamazon",
+  "version": "1.0.0",
+  "description": "Home for demonstrating Node.js & MySQL skills",
+  "main": "slamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larryevans19/Slamazon.git"
+  },
+  "author": "LTrain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/larryevans19/Slamazon/issues"
+  },
+  "homepage": "https://github.com/larryevans19/Slamazon#readme",
+  "dependencies": {
+    "inquirer": "^6.3.1",
+    "mysql": "^2.17.1"
+  }
+}
