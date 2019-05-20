@@ -1,4 +1,3 @@
-// Dependencies
 const mysql = require("mysql");
 const inquirer = require("inquirer");
 
@@ -44,7 +43,7 @@ function slamazon() {
         {
             if (err) throw err;
             // console.log("Item:", input.item_id)
-            // console.log("Units:", input.stock_quantity)
+            console.log("Units:", input.stock_quantity)
             // console.log("Query:", res);
             // console.log(`Price: $${res[0].price}`);
             // console.log(`Total Cost: $${res[0].price*input.stock_quantity}`)
@@ -57,14 +56,16 @@ function slamazon() {
             else {
                 connection.query(
                     "UPDATE stock_quantity SET ? WHERE ?",
-                    [
-                      {
+                    [{
                         stock_quantity: res[0].stock_quantity - input.stock_quantity
-                      }
-                    ]),
+                      }]);
 
+                   const newQuantity = (res[0].stock_quantity - input.stock_quantity);
+
+                    console.log("Updated quantity:", newQuantity);
+                    console.log("*******************************************");
                     console.log("Your order was completed successfully!");
-                    console.log("-------------------------------------_");
+                    console.log("--------------------------------------");
                     console.log("Here is a summary of your purchase:");
                     console.log(`Product Purchased: ${res[0].product_name}`);
                     console.log(`Quantity Purchased: ${input.stock_quantity}`);
