@@ -29,9 +29,9 @@ function slamazonStart() {
   });
 }
 
-// Function which prompts the user for what products they want to buy
+// The function slamazonBuy prompts the user for what products they want to buy
 function slamazonBuy() {
-  // prompt for info about the item being put up for auction
+  // Inquirer prompts consumer for the product and quantity they want to buy
   inquirer
     .prompt([
       {
@@ -84,6 +84,7 @@ function slamazonBuy() {
     });
 };
 
+// The function updateStock updates the stock_quantity after each purchase is completed
 function updateStock(newQuantity, stockItem) {
 
   connection.query(
