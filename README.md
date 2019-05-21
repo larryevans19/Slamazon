@@ -7,4 +7,4 @@
 
 ![](update.png)
 
-![](deny.png)
+![](deny.gif)
