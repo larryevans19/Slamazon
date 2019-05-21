@@ -20,6 +20,9 @@ function slamazonStart() {
   connection.query("SELECT * FROM slamazonDB.products", function (err, res) {
     if (err) throw err;
     console.log(`\n`);
+    console.log("Welcome to SLAMAZON!  We have the prescription for your shopping addiction!\n")
+    console.log("Here are Today's Deals!\n")
+    
     for (var i = 0; i < res.length; i++) {
       console.log(`${res[i].item_id} | ${res[i].product_name} | $${res[i].price}`);
     }
