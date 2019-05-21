@@ -1,4 +1,4 @@
 # Slamazon
 
 
-![](seeds.png)
+![](seed.png)
