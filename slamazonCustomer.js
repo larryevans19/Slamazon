@@ -59,9 +59,9 @@ function slamazonBuy() {
           // console.log(`Total Cost: $${res[0].price*input.stock_quantity}`)
 
           if (res[0].stock_quantity < input.stock_quantity) {
-            console.log(`We are sorry, but Slamazon currently does not have enough inventory to fulfill the quantity you requested.`);
+            console.log(`\nWe are sorry, but Slamazon currently does not have enough inventory to fulfill the quantity you requested.`);
             console.log(`Slamazon currently has ${res[0].stock_quantity} units available.`);
-            console.log(`Please press Ctrl+C to exit and create a new order if you would like to purchase the quantity available.`);
+            console.log(`\nPlease press Ctrl+C to exit and create a new order if you would like to purchase the quantity available.`);
           }
           else {
 
