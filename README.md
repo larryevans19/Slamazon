@@ -20,7 +20,7 @@ Here is a peak into the _products_ database in MySQL immediately after the seedi
 
 ### User Experience 
 
-When the customer begins the shopping experience by executing the _slamazonCustomer.js_ file in Node within the terminal, the file accesses the _products_ database and builds a table of "Today's Deals" to present to the customer in the terminal.  Today's Deals are presented in a slick front end interface using the _CLI Table_ npm package which additionally leverages the _colors.js_ npm package to bring the vibrant colors the user will in the terminal session which are so inviting it might cause shoppers to forget about the browser all together!  Shoppers will definitely forget about the stone age black and white experience on Bamazon. 
+When the customer begins the shopping experience by executing the _slamazonCustomer.js_ file in Node within the terminal, the file accesses the _products_ database and builds a table of "Today's Deals" to present to the customer in the terminal.  Today's Deals are presented in a slick front end interface using the _CLI Table_ npm package which additionally leverages the _colors.js_ npm package to bring the vibrant colors the user encounters in the terminal session which are so inviting it might cause shoppers to forget about the browser all together!  Shoppers will definitely forget about the stone age black and white experience on Bamazon. 
 
 ![](todaysdeals.png)
 
