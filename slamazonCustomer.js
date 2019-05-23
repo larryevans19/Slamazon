@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
   port: 3306,
 });
 
-// Connect to the mysql server and sql database
+// Connect to the mySQL server and database
 connection.connect(function (err) {
   if (err) throw err;
   // Run the slamazonStart function after the connection is made to show all of the products available for purchase
