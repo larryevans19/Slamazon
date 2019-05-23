@@ -32,7 +32,7 @@ Once a quantity of product is purchased, _slamaonCustomer.js_ updates the stock 
 
 ![](update.png)
 
-When a shopper attempts to purchase a product that is out of stock, or a quantity of a product that is greater than the remaining supply reflected in the database, **Slamazon** provides a notice to the shopper in the terminal and advises on the number of units of the product currently in stock.  The shopper is prompted to press Ctrl+C and initiate a new shopping session if there was not sufficient inventory to fulfill the original order, but there is some level of available inventory for the product.
+When a shopper attempts to purchase a product that is out of stock, or a quantity of a product that is greater than the remaining supply reflected in the database, **Slamazon** provides a notice to the shopper in the terminal and advises on the number of units of the product currently in stock.  The shopper is prompted to press Ctrl+C and initiate a new shopping session if there was not sufficient inventory to fulfill the original order.
 
 ![](deny.gif)
 
