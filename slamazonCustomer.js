@@ -82,17 +82,17 @@ function slamazonBuy() {
 
           if (res[0].stock_quantity < input.stock_quantity) {
             console.log(`\nWe are sorry, but Slamazon currently does not have enough inventory to fulfill the quantity you requested.`);
-            console.log(`Slamazon currently has ${res[0].stock_quantity} units available.`);
+            console.log(`Slamazon currently has`, `${res[0].stock_quantity}`.red,`units available.`);
             console.log(`\nPlease press Ctrl+C to exit and create a new order if you would like to purchase the quantity available.`);
           }
           else {
             totalPrice = input.stock_quantity * res[0].price
-            console.log("\nYour order was completed successfully!");
+            console.log("\nYour order was completed successfully!".green);
             console.log("-----------------------------------------------------------------------------");
-            console.log("Here is a summary of your purchase:");
-            console.log(`Product Purchased: ${res[0].product_name}`);
-            console.log(`Quantity Purchased: ${input.stock_quantity}`);
-            console.log(`Total Price: $${totalPrice.toFixed(2)}`);
+            console.log("Here is a summary of your purchase:".cyan);
+            console.log(`Product Purchased: `,`${res[0].product_name}`.yellow);
+            console.log(`Quantity Purchased: `,`${input.stock_quantity}`.yellow);
+            console.log(`Total Price: `,`$${totalPrice.toFixed(2)}`.yellow);
             console.log("\nYou will receive a confirmation email when your order has shipped.  Thank you for choosing Slamazon!");
 
             // Update the inventory
