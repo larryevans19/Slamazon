@@ -1,5 +1,7 @@
 const mysql = require("mysql");
 const inquirer = require("inquirer");
+const table = require ("cli-table")
+const colors = require ("colors")
 
 // Create the connection info for the SQL database
 const connection = mysql.createConnection({
@@ -19,14 +21,31 @@ connection.connect(function (err) {
 function slamazonStart() {
   connection.query("SELECT * FROM slamazonDB.products", function (err, res) {
     if (err) throw err;
-    console.log(`\n`);
-    console.log("Welcome to SLAMAZON!  We have the prescription for your shopping addiction!\n")
-    console.log("Here are Today's Deals!\n")
-    
-    for (var i = 0; i < res.length; i++) {
-      console.log(`${res[i].item_id} | ${res[i].product_name} | $${res[i].price}`);
-    }
-    console.log("***************************************************************************");
+    // console.log(`\n`);
+
+    console.log(`
+ $$$$$$  $$          $$$    $$     $$    $$$    $$$$$$$$  $$$$$$$  $$    $$
+$$    $$ $$         $$ $$   $$$   $$$   $$ $$        $$  $$     $$ $$$   $$
+$$       $$        $$   $$  $$$$ $$$$  $$   $$      $$   $$     $$ $$$$  $$
+ $$$$$$  $$       $$     $$ $$ $$$ $$ $$     $$    $$    $$     $$ $$ $$ $$
+      $$ $$       $$$$$$$$$ $$  $  $$ $$$$$$$$$   $$     $$     $$ $$  $$$$
+$$    $$ $$       $$     $$ $$     $$ $$     $$  $$      $$     $$ $$   $$$ 
+ $$$$$$  $$$$$$$$ $$     $$ $$     $$ $$     $$ $$$$$$$$  $$$$$$$  $$    $$ 
+ `.yellow)
+    console.log("Welcome to SLAMAZON, where we're made of your money!\nWe have the prescription for your shopping addiction!\n".green)
+    console.log("Here are Today's Deals!\n".cyan)
+
+    //Instantiate the product table for the CLI
+    let products = new table({
+      head: ["ID".yellow, "Product Description".yellow, "Price".yellow],
+      colWidths: [4, 55, 9]
+    });
+
+    for (let i = 0; i < res.length; i++) {
+      products.push([`${res[i].item_id}`, `${res[i].product_name}`, `$${res[i].price.toFixed(2)}`]);
+    };
+    console.log (products.toString());
+    console.log("\n");
     // Call the slamazonBuy function to prompt the user for what they want to buy
     slamazonBuy();
   });
@@ -67,13 +86,13 @@ function slamazonBuy() {
             console.log(`\nPlease press Ctrl+C to exit and create a new order if you would like to purchase the quantity available.`);
           }
           else {
-
+            totalPrice = input.stock_quantity * res[0].price
             console.log("\nYour order was completed successfully!");
             console.log("-----------------------------------------------------------------------------");
             console.log("Here is a summary of your purchase:");
             console.log(`Product Purchased: ${res[0].product_name}`);
             console.log(`Quantity Purchased: ${input.stock_quantity}`);
-            console.log(`Total Price: $${input.stock_quantity * res[0].price}`);
+            console.log(`Total Price: $${totalPrice.toFixed(2)}`);
             console.log("\nYou will receive a confirmation email when your order has shipped.  Thank you for choosing Slamazon!");
 
             // Update the inventory
