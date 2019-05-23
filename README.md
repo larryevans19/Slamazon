@@ -2,13 +2,13 @@
 
 ![](slamazon.png)
 
-##About
+## About
 
 **Slamazon** is a **Node.js** and **MySQL** powered CLI shopping experience application designed to quench your impulses to shop when you are grinding away in a terminal session.  Other imposters may have the browser shopping market cornered, but **Slamazon** has no competition in the terminal-- don't even think about lame Bamazon.
 
-##How it Works
+## How it Works
 
-###The Database
+### The Database
 
 **Slamazon** is supplied thanks to a database called _products_ managed in MySQL.  The _products_ database was seeded by the slamazon.sql file that contains the deals of the day featured in the application.  
 
@@ -18,7 +18,7 @@ Here is a peak into the _products_ database in MySQL immediately after the seedi
 
 ![](seed.png)
 
-###User Experience 
+### User Experience 
 
 When the customer begins the shopping experience by executing the _slamazonCustomer.js_ file in Node within the terminal, the file accesses the _products_ database and builds a table of "Today's Deals" to present to the customer in the terminal.  Today's Deals are presented in a slick front end interface using the _CLI Table_ npm package which additionally leverages the _colors.js_ npm package to bring the vibrant colors the user will in the terminal session which are so inviting it might cause shoppers to forget about the browser all together!  Shoppers will definitely forget about the stone age black and white experience on Bamazon. 
 
@@ -36,7 +36,7 @@ When a shopper attempts to purchase a product that is out of stock, or a quantit
 
 ![](deny.gif)
 
-##Future Releases
+## Future Releases
 
 Challenges 2 and 3 of **Slamazon** are coming soon!
 
