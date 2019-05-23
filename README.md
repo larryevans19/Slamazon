@@ -10,11 +10,11 @@
 
 ### The Database
 
-**Slamazon** is supplied thanks to a database called _products_ managed in MySQL.  The _products_ database was seeded by the _slamazon.sql_ file that contains the deals of the day featured in the application.  
+The _Slamazon_ database managed in MySQL supplies the shopper with the products contained in the appropriated named _products_ table.  The database was seeded by the _slamazon.sql_ file that contains the deals of the day featured in the application.  
 
 ![](seedfile.png)
 
-Here is a peak into the _products_ database in MySQL immediately after the seeding.
+Here is a peak into the _products_ table in the _Slamazon_ database in MySQL immediately after the seeding.
 
 ![](seed.png)
 
@@ -28,7 +28,7 @@ After reviewing Today's Deals, the shopper is asked to enter the ID of the produ
 
 ![](buy.gif)
 
-Once a quantity of product is purchased, _slamaonCustomer.js_ updates the stock totals in the _products_ database in real time.  In the previous demonstration, the shopper purchased the final unit in inventory of product ID 9.  You can see the database was updated to reflect there are now no more units in stock.  
+Once a quantity of product is purchased, _slamaonCustomer.js_ updates the stock totals in the _products_ table of the database in real time.  In the previous demonstration, the shopper purchased the final unit in inventory of product ID 9.  You can see the database was updated to reflect there are now no more units in stock.  
 
 ![](update.png)
 
