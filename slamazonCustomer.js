@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 const inquirer = require("inquirer");
-const table = require ("cli-table")
-const colors = require ("colors")
+const table = require("cli-table")
+const colors = require("colors")
 
 // Create the connection info for the SQL database
 const connection = mysql.createConnection({
