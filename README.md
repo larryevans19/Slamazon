@@ -10,7 +10,7 @@
 
 ### The Database
 
-**Slamazon** is supplied thanks to a database called _products_ managed in MySQL.  The _products_ database was seeded by the slamazon.sql file that contains the deals of the day featured in the application.  
+**Slamazon** is supplied thanks to a database called _products_ managed in MySQL.  The _products_ database was seeded by the _slamazon.sql_ file that contains the deals of the day featured in the application.  
 
 ![](seedfile.png)
 
