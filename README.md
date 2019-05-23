@@ -4,7 +4,7 @@
 
 ## About
 
-**Slamazon** is a **Node.js** and **MySQL** powered CLI shopping experience application designed to quench your impulses to shop when you are grinding away in a terminal session.  Other imposters may have the browser shopping market cornered, but **Slamazon** has no competition in the terminal-- don't even think about lame Bamazon.
+**Slamazon** is a **Node.js** and **MySQL** powered CLI shopping experience application designed to quench your impulses to shop that arise while you are grinding away in a terminal session.  Other imposters may have the browser shopping market cornered, but **Slamazon** has no competition in the terminal-- don't even think about lame Bamazon.
 
 ## How it Works
 
@@ -20,7 +20,7 @@ Here is a peak into the _products_ table in the _Slamazon_ database in MySQL imm
 
 ### User Experience 
 
-When the customer begins the shopping experience by executing the _slamazonCustomer.js_ file in Node within the terminal, the file accesses the _products_ database and builds a table of "Today's Deals" to present to the customer in the terminal.  Today's Deals are presented in a slick front end interface using the _CLI Table_ npm package which additionally leverages the _colors.js_ npm package to bring the vibrant colors the user encounters in the terminal session which are so inviting it might cause shoppers to forget about the browser all together!  Shoppers will definitely forget about the stone age black and white experience on Bamazon. 
+When the customer begins the shopping experience by executing the _slamazonCustomer.js_ file in Node within the terminal, the a SQL query of the _products_ table in the database accesses the product info used to build a table of "Today's Deals" to present to the shopper in the terminal.  Today's Deals are presented in a slick front end interface using the _CLI Table_ npm package which additionally leverages the _colors.js_ npm package to bring the vibrant colors the user encounters in the terminal session which are so inviting it might cause users to forget about the browser shopping all together!  Shoppers will definitely forget about the stone age black and white terminal experience on Bamazon. 
 
 ![](todaysdeals.png)
 
@@ -28,7 +28,7 @@ After reviewing Today's Deals, the shopper is asked to enter the ID of the produ
 
 ![](buy.gif)
 
-Once a quantity of product is purchased, _slamaonCustomer.js_ updates the stock totals in the _products_ table of the database in real time.  In the previous demonstration, the shopper purchased the final unit in inventory of product ID 9.  You can see the database was updated to reflect there are now no more units in stock.  
+Once a quantity of product is purchased, _slamaonCustomer.js_ updates the stock totals in the _products_ table of the database in real time using a SQL query.  In the previous demonstration, the shopper purchased the final unit in inventory of product ID 9.  You can see the database was updated to reflect there are now no more units in stock.  
 
 ![](update.png)
 
