@@ -41,6 +41,7 @@ $$    $$ $$       $$     $$ $$     $$ $$     $$  $$      $$     $$ $$   $$$
       colWidths: [4, 55, 9]
     });
 
+      // Loop through the database response and push each record into the products table that will be console logged into the terminal.
     for (let i = 0; i < res.length; i++) {
       products.push([`${res[i].item_id}`, `${res[i].product_name}`, `$${res[i].price.toFixed(2)}`]);
     };
@@ -99,6 +100,7 @@ function slamazonBuy() {
             let newQuantity = (res[0].stock_quantity - input.stock_quantity);
             let stockItem = input.item_id;
 
+              // CAll updateStock function to update the inventory following the purchase by passing in the updated quantity and the ID of the product being updated.
             updateStock(newQuantity, stockItem)
           }
         }
