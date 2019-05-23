@@ -10,7 +10,7 @@
 
 ### The Database
 
-The _slamazonDB_ database managed in MySQL supplies the shopper with the products contained in the appropriated named _products_ table.  The database was seeded by the _slamazon.sql_ file that contains the deals of the day featured in the application.  
+The _slamazonDB_ database managed in MySQL supplies the shopper with the products contained in the appropriately named _products_ table.  The database was seeded by the _slamazon.sql_ file that contains the deals of the day featured in the application.  
 
 ![](seedfile.png)
 
