@@ -28,7 +28,7 @@ After reviewing Today's Deals, the shopper is asked to enter the ID of the produ
 
 ![](buy.gif)
 
-Once a quantity of product is purchased, _slamaonCustomer.js_ updates the stock totals in the _products_ database.  In the previous demonstration, the shopper purchased the final unit in inventory of product ID 9.  You can see the database was updated to reflect there are now no more units in stock.  
+Once a quantity of product is purchased, _slamaonCustomer.js_ updates the stock totals in the _products_ database in real time.  In the previous demonstration, the shopper purchased the final unit in inventory of product ID 9.  You can see the database was updated to reflect there are now no more units in stock.  
 
 ![](update.png)
 
