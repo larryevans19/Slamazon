@@ -35,7 +35,7 @@ $$    $$ $$       $$     $$ $$     $$ $$     $$  $$      $$     $$ $$   $$$
     console.log("Welcome to SLAMAZON, where we're made of your money!\nWe have the prescription for your shopping addiction!\n".green)
     console.log("Here are Today's Deals!\n".cyan)
 
-    //Instantiate the product table for the CLI
+    //Instantiate the products table for the CLI
     let products = new table({
       head: ["ID".yellow, "Product Description".yellow, "Price".yellow],
       colWidths: [4, 55, 9]
